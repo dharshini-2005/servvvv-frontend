@@ -13,7 +13,7 @@ import SofaCarpet from "./Components/SofaCarpet";
 import CockroachAntPestControl from "./Components/CockroachAntPestControl"; 
 import ACService from "./Components/ACService";
 import Bathroom from "./Components/Bathroom";
-import WashingMachine from "./Components/Washingmachine";
+import WashingMachine from "./Components/WashingMachine";
 // import Geyser from "./Components/Geyser";
 import Plumbing from "./Components/Plumbing";
 import Carpentry from "./Components/Carpentry";
