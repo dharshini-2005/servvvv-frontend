@@ -1,0 +1,190 @@
+.ac-page {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  flex-direction: column;
+}
+
+.hero-content {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.role-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.role-buttons button {
+  background-color: #1976d2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.role-buttons button:hover {
+  background-color: #0d47a1;
+}
+
+.provider-form-section,
+.customer-section {
+  width: 100vw;
+  height: 100vh;
+  background-color:lightblue;
+  padding: 40px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.provider-form-section input,
+.provider-form-section textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+}
+
+.provider-form-section button {
+  background-color: #1976d2;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.provider-form-section button:hover {
+  background-color: #0d47a1;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.service-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  box-sizing: border-box;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  margin: 5px 0;
+}
+
+.service-card button {
+  background-color: #1976d2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.service-card button:hover {
+  background-color: #0d47a1;
+}
+
+.cart-section {
+  background-color: #bbdefb;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.book-btn {
+  background-color: #1976d2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.book-btn:hover {
+  background-color: #0d47a1;
+}
+
+.booking-toggle-btn {
+  width: fit-content;
+  margin: 10px auto 20px auto;
+  display: block;
+  background-color: #1e88e5;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.booking-toggle-btn:hover {
+  background-color: #1565c0;
+}
+
+.name-input {
+  width: 220px;
+  margin: 20px auto;
+  display: block;
+  background-color: #111;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.avail {
+  color: #0d47a1;
+}
+
+.add {
+  color: #0d47a1;
+}

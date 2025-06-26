@@ -1,0 +1,143 @@
+body {
+  background: #fff !important;
+}
+
+.about-container {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 4rem 4vw;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.about-header h1 {
+  font-size: 2.5rem;
+  color: #1a73e8; /* Google Blue */
+  margin-bottom: 1rem;
+}
+
+.about-subtitle {
+  font-size: 1.2rem;
+  color: #4285f4; /* Lighter Blue */
+  font-style: italic;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.about-section {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(26, 115, 232, 0.1);
+  transition: transform 0.3s ease;
+  border: 1px solid #e8f0fe; /* Very light blue border */
+}
+
+.about-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(26, 115, 232, 0.15);
+}
+
+.section-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1a73e8; /* Google Blue */
+}
+
+.about-section h2 {
+  color: #1a73e8; /* Google Blue */
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #4285f4; /* Lighter Blue */
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.about-section p {
+  color: #4285f4; /* Lighter Blue */
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.about-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-section ul li {
+  color: #4285f4; /* Lighter Blue */
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.about-section ul li:before {
+  content: "•";
+  color: #1a73e8; /* Google Blue */
+  position: absolute;
+  left: 0;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.value-item {
+  background: #f8faff; /* Very light blue background */
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #e8f0fe; /* Very light blue border */
+}
+
+.value-item:hover {
+  background: #e8f0fe; /* Light blue on hover */
+  transform: translateY(-3px);
+}
+
+.value-item h3 {
+  color: #1a73e8; /* Google Blue */
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.value-item p {
+  color: #4285f4; /* Lighter Blue */
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 2rem 1rem;
+  }
+
+  .about-header h1 {
+    font-size: 2rem;
+  }
+
+  .about-section {
+    padding: 1.5rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  

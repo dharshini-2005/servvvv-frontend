@@ -1,0 +1,100 @@
+.provider-login-wrapper {
+    display: flex;
+    height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  .login-left-panel {
+    flex: 3.5;
+    background: linear-gradient(135deg, #4f46e5, #3b82f6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+  }
+  
+  .login-left-panel h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .login-left-panel p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .login-left-panel footer {
+    position: absolute;
+    bottom: 20px;
+    left: 60px;
+    font-size: 12px;
+    opacity: 0.8;
+  }
+  
+  .login-right-panel {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+  }
+  
+  .form-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .form-box p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .form-box p span {
+    color: #3b82f6;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .form-box form input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+  }
+  
+  .form-box form button {
+    width: 100%;
+    background-color: #111827;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .form-box form button:hover {
+    background-color: #000;
+  }
+  
+  .forgot-link {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #666;
+  }
+  
+  .forgot-link a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  

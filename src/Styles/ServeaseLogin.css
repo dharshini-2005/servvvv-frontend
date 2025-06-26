@@ -1,0 +1,96 @@
+.servease-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Left Panel */
+.left-panel {
+  width: 50%;
+  background: #4f46e5;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.left-panel h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.left-panel .tagline {
+  font-size: 18px;
+  max-width: 300px;
+}
+
+.left-panel .copyright {
+  margin-top: 60px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Right Panel */
+.right-panel {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.login-box {
+  max-width: 350px;
+  width: 100%;
+}
+
+.login-box h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.login-box p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.google-btn {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.forgot {
+  margin-top: 15px;
+  font-size: 13px;
+}

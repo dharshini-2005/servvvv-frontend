@@ -1,0 +1,44 @@
+{
+  "training_data": [
+    {
+      "question": "What services do you offer?",
+      "answer": "We offer various home services including Home Cleaning, Sofa & Carpet Cleaning, Television Repair, Plumbing, Carpentry, and Electrical services. Each service is provided by verified professionals."
+    },
+    {
+      "question": "How do I book a service?",
+      "answer": "To book a service, first create a customer account, then browse through available services, add them to your cart, and click 'Book All Services' to confirm your booking."
+    },
+    {
+      "question": "How can I become a service provider?",
+      "answer": "To become a service provider, click on 'I'm a Service Provider' button, create an account, and then you can start adding your services with details like price, time required, and description."
+    },
+    {
+      "question": "What payment methods do you accept?",
+      "answer": "We currently accept various payment methods including credit/debit cards, UPI, and net banking. Payment details will be provided during the booking process."
+    },
+    {
+      "question": "How do I track my service request?",
+      "answer": "Once you book a service, you'll receive a confirmation with a tracking ID. You can use this ID to track the status of your service request in your account dashboard."
+    },
+    {
+      "question": "What areas do you serve?",
+      "answer": "We currently serve major metropolitan areas. Please check your location during the booking process to confirm service availability in your area."
+    },
+    {
+      "question": "How much do your services cost?",
+      "answer": "Service costs vary depending on the type of service and specific requirements. You can view detailed pricing for each service on their respective pages. Prices are set by our verified service providers."
+    },
+    {
+      "question": "What if I need to cancel my booking?",
+      "answer": "You can cancel your booking up to 24 hours before the scheduled service time. Cancellations can be made through your account dashboard or by contacting our customer support."
+    },
+    {
+      "question": "Are your service providers verified?",
+      "answer": "Yes, all our service providers go through a thorough verification process including background checks, skill assessment, and customer feedback review before being listed on our platform."
+    },
+    {
+      "question": "How can I contact customer support?",
+      "answer": "You can reach our customer support through the 'Contact Us' section on our website, or by emailing support@servease.com. Our support team is available 24/7 to assist you."
+    }
+  ]
+} 

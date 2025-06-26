@@ -1,0 +1,117 @@
+.painting-page {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: #388e3c;
+  padding: 40px;
+  flex-direction: column;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.role-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.role-buttons button {
+  background-color: #388e3c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.role-buttons button:hover {
+  background-color: #2e7d32;
+}
+
+.provider-form-section,
+.customer-section {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f1f8e9;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #388e3c;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #2e7d32;
+}
+
+.name-input {
+  width: 220px;
+  margin: 20px auto;
+  display: block;
+  background-color: #222;
+  color: white;
+  padding: 12px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+}
+
+.cart-section, .booking-list {
+  background-color: #dcedc8;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.booking-toggle-btn {
+  display: block;
+  margin: 20px auto;
+  background-color: #558b2f;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 1rem;
+}

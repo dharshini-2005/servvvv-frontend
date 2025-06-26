@@ -1,0 +1,175 @@
+/* General Page Styles */
+.carpentry-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  background-color: #f8f9fa;
+  width: 300px;
+}
+
+.no-bg {
+  background: none;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 12px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  padding: 100px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.role-buttons button {
+  margin: 0 10px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.role-buttons button:hover {
+  background-color: #e0a800;
+}
+
+/* Provider Form Section */
+.provider-form-section {
+  max-width: 4300px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 0px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.provider-form-section h2.add {
+  text-align: center;
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+.provider-form-section input,
+.provider-form-section textarea {
+  width: 300px;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.provider-form-section button {
+  width: 300px;
+  background-color: skyblue;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.provider-form-section button:hover {
+  background-color: blue;
+}
+
+/* Booking List */
+.booking-list {
+  margin-top: 30px;
+}
+
+.booking-card {
+  background-color: #f1f3f5;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border-left: 5px solid skyblue;
+}
+
+/* Customer Section */
+.customer-section {
+  max-width: 6000px;
+  margin: 40px auto;
+  padding: 200px;
+  background: white;
+  border-radius: 0px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.customer-section .name-input {
+  width: 300px;
+  padding: 12px;
+  margin: 20px 0;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.customer-section .service-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.customer-section .service-card {
+  width: 45%;
+  margin: 10px;
+  padding: 12px;
+  background-color: #f1f3f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.customer-section button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.customer-section button:hover {
+  background-color: #0056b3;
+}
+
+.customer-section .cart-section {
+  margin-top: 40px;
+}
+
+.cart-section button.book-btn {
+  background-color: #28a745;
+}
+
+.cart-section button.book-btn:hover {
+  background-color: #218838;
+}
+
+.booking-toggle-btn {
+  background-color: #ffc107;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.booking-toggle-btn:hover {
+  background-color: #e0a800;
+}

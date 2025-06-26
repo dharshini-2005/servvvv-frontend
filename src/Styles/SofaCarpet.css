@@ -1,0 +1,139 @@
+.sofa-carpet-page {
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 8%;
+  position: relative;
+}
+
+.no-bg .hero {
+  display: none;
+}
+
+.hero-content {
+  position: relative;
+  color: black;
+  z-index: 1;
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.role-buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  background: #ff5757;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.role-buttons button:hover {
+  background: #ff3e3e;
+}
+
+.provider-form-section,
+.customer-section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.provider-form-section input,
+.provider-form-section textarea,
+.customer-section input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.provider-form-section button,
+.customer-section button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.provider-form-section button:hover,
+.customer-section button:hover {
+  background-color: #0056b3;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.service-card,
+.booking-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-card button {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.service-card button:hover {
+  background-color: #218838;
+}
+
+.booking-toggle-btn {
+  margin-top: 15px;
+}
+
+.cart-section {
+  background: #f7f7f7;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.book-btn {
+  margin-top: 10px;
+  background-color: #ff9800;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background-color: #e68900;
+}
