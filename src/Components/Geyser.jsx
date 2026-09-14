@@ -24,8 +24,8 @@
       
 //       try {
 //         const endpoint = role === "provider" 
-//           ? `http://localhost:5000/api/services/geyser/provider/${encodeURIComponent(user.email)}`
-//           : "http://localhost:5000/api/services/geyser";
+//           ? `https://servease-backend-870h.onrender.com/api/services/geyser/provider/${encodeURIComponent(user.email)}`
+//           : "https://servease-backend-870h.onrender.com/api/services/geyser";
         
 //         const response = await fetch(endpoint);
 //         if (!response.ok) {
@@ -80,7 +80,7 @@
 //         price: Number(price)
 //       };
 
-//       const response = await fetch("http://localhost:5000/api/services/geyser", {
+//       const response = await fetch("https://servease-backend-870h.onrender.com/api/services/geyser", {
 //         method: "POST",
 //         headers: { "Content-Type": "application/json" },
 //         body: JSON.stringify(newService),
@@ -139,7 +139,7 @@
 //         specialInstructions: "Geyser service booking"
 //       };
 
-//       const response = await fetch("http://localhost:5000/api/bookings/geyser", {
+//       const response = await fetch("https://servease-backend-870h.onrender.com/api/bookings/geyser", {
 //         method: "POST",
 //         headers: { "Content-Type": "application/json" },
 //         body: JSON.stringify(bookingData),

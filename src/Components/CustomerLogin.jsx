@@ -1,84 +1,66 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import '../Styles/CustomerLogin.css';
+import React, { useState } from "react";
+import axios from "axios";
+import "../Styles/CustomerLogin.css";
+
+const API = "https://servease-backend-870h.onrender.com/api/auth";
 
 const CustomerLogin = ({ onLogin }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [email, setEmail]           = useState("");
+  const [password, setPassword]     = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [name, setName]             = useState("");
   const [isRegistering, setIsRegistering] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [isLoading, setIsLoading]   = useState(false);
+  const [error, setError]           = useState("");
+
+  const reset = () => { setPassword(""); setConfirmPassword(""); setError(""); };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
+    setError("");
     setIsLoading(true);
 
-    if (!email || !password || (isRegistering && !confirmPassword)) {
-      setError('Please fill all fields');
+    if (!email || !password || (isRegistering && (!confirmPassword || !name))) {
+      setError("Please fill in all fields.");
       setIsLoading(false);
       return;
     }
-
     if (isRegistering && password !== confirmPassword) {
-      setError('Passwords do not match');
+      setError("Passwords do not match.");
       setIsLoading(false);
       return;
     }
-
     if (password.length < 6) {
-      setError('Password must be at least 6 characters long');
+      setError("Password must be at least 6 characters.");
       setIsLoading(false);
       return;
     }
 
-    const endpoint = isRegistering ? '/register' : '/login';
-
+    const endpoint = isRegistering ? "/register" : "/login";
     try {
-      const response = await axios.post(
-        `https://servvvv.onrender.com/api/auth${endpoint}`,
-        {
-          email,
-          password,
-          role: 'customer',
-          name: email.split('@')[0]
-        },
-        {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        }
-      );
+      const { data } = await axios.post(`${API}${endpoint}`, {
+        email,
+        password,
+        role: "customer",
+        name: isRegistering ? name : email.split("@")[0],
+      });
 
-      if (response.data.error) {
-        setError(response.data.error);
-        return;
-      }
+      if (data.error) { setError(data.error); return; }
 
-      localStorage.setItem('user', JSON.stringify(response.data));
-
-      alert(isRegistering ? 'Registration successful! Please login.' : 'Login successful!');
+      localStorage.setItem("user", JSON.stringify(data));
 
       if (isRegistering) {
         setIsRegistering(false);
-        setPassword('');
-        setConfirmPassword('');
+        reset();
+        alert("Registration successful! Please log in.");
       } else {
-        const userData = {
-          email: response.data.email,
-          role: response.data.role,
-          name: response.data.name,
-          _id: response.data._id
-        };
-        onLogin(userData);
+        onLogin({ email: data.email, role: data.role, name: data.name, _id: data._id });
       }
-    } catch (error) {
-      console.error('Login/Register error:', error);
+    } catch (err) {
       setError(
-        error.response?.data?.error ||
-        error.response?.data?.message ||
-        'Something went wrong. Please try again.'
+        err.response?.data?.error ||
+        err.response?.data?.message ||
+        "Something went wrong. Please try again."
       );
     } finally {
       setIsLoading(false);
@@ -87,41 +69,55 @@ const CustomerLogin = ({ onLogin }) => {
 
   return (
     <div className="customer-login-wrapper">
+      {/* Left panel */}
       <div className="login-left-panel">
-        <h1>Welcome<br />to ServEase 👋</h1>
-        <p>Find and book<br />services easily!</p>
-        <footer>© 2025 ServEase. All rights reserved.</footer>
+        <h1>Welcome to ServiceX 👋</h1>
+        <p>Find and book trusted home service professionals near you in minutes.</p>
+        <div style={{ marginTop: "2rem", display: "flex", flexDirection: "column", gap: "0.75rem", position: "relative", zIndex: 1 }}>
+          {["🏠 12M+ services booked", "⭐ 4.8 average rating", "✅ Verified professionals", "📅 Flexible scheduling"].map((f) => (
+            <div key={f} style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.85)", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              {f}
+            </div>
+          ))}
+        </div>
+        <footer>© {new Date().getFullYear()} ServiceX. All rights reserved.</footer>
       </div>
+
+      {/* Right panel */}
       <div className="login-right-panel">
         <div className="form-box">
-          <h2>{isRegistering ? "Register" : "Hello Customer!"}</h2>
+          <h2>{isRegistering ? "Create Account" : "Welcome back!"}</h2>
           <p>
-            {isRegistering ? "Already have an account?" : "New here?"}{" "}
+            {isRegistering ? "Already have an account?" : "New to ServiceX?"}{" "}
             <span
-              onClick={() => {
-                setIsRegistering(!isRegistering);
-                setError('');
-                setPassword('');
-                setConfirmPassword('');
-              }}
-              style={{ cursor: 'pointer', color: '#007bff' }}
+              onClick={() => { setIsRegistering(!isRegistering); reset(); }}
+              style={{ cursor: "pointer", color: "var(--sx-primary)", fontWeight: 600 }}
             >
-              {isRegistering ? "Login" : "Register"}
+              {isRegistering ? "Sign In" : "Register"}
             </span>
           </p>
-          {error && (
-            <div className="error-message" style={{ color: 'red', marginBottom: '10px' }}>
-              {error}
-            </div>
-          )}
-          <form onSubmit={handleSubmit}>
+
+          {error && <div className="error-message">{error}</div>}
+
+          <form onSubmit={handleSubmit} noValidate>
+            {isRegistering && (
+              <input
+                type="text"
+                placeholder="Your full name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+                disabled={isLoading}
+              />
+            )}
             <input
               type="email"
-              placeholder="Email Address"
+              placeholder="Email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
               disabled={isLoading}
+              autoComplete="email"
             />
             <input
               type="password"
@@ -130,26 +126,25 @@ const CustomerLogin = ({ onLogin }) => {
               onChange={(e) => setPassword(e.target.value)}
               required
               disabled={isLoading}
+              autoComplete={isRegistering ? "new-password" : "current-password"}
             />
             {isRegistering && (
               <input
                 type="password"
-                placeholder="Confirm Password"
+                placeholder="Confirm password"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
                 disabled={isLoading}
+                autoComplete="new-password"
               />
             )}
-            <button
-              type="submit"
-              disabled={isLoading}
-              style={{ opacity: isLoading ? 0.7 : 1 }}
-            >
-              {isLoading ? 'Please wait...' : (isRegistering ? 'Register' : 'Login Now')}
+            <button type="submit" disabled={isLoading}>
+              {isLoading ? "Please wait…" : isRegistering ? "Create Account" : "Sign In"}
             </button>
           </form>
-          <p className="forgot-link">Forgot password? <a href="#">Click here</a></p>
+
+          <p className="forgot-link">Forgot password? <a href="#">Reset here</a></p>
         </div>
       </div>
     </div>
