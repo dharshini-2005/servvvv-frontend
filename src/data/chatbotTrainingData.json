@@ -1,44 +1,70 @@
-{
-  "training_data": [
-    {
-      "question": "What services do you offer?",
-      "answer": "We offer various home services including Home Cleaning, Sofa & Carpet Cleaning, Television Repair, Plumbing, Carpentry, and Electrical services. Each service is provided by verified professionals."
-    },
-    {
-      "question": "How do I book a service?",
-      "answer": "To book a service, first create a customer account, then browse through available services, add them to your cart, and click 'Book All Services' to confirm your booking."
-    },
-    {
-      "question": "How can I become a service provider?",
-      "answer": "To become a service provider, click on 'I'm a Service Provider' button, create an account, and then you can start adding your services with details like price, time required, and description."
-    },
-    {
-      "question": "What payment methods do you accept?",
-      "answer": "We currently accept various payment methods including credit/debit cards, UPI, and net banking. Payment details will be provided during the booking process."
-    },
-    {
-      "question": "How do I track my service request?",
-      "answer": "Once you book a service, you'll receive a confirmation with a tracking ID. You can use this ID to track the status of your service request in your account dashboard."
-    },
-    {
-      "question": "What areas do you serve?",
-      "answer": "We currently serve major metropolitan areas. Please check your location during the booking process to confirm service availability in your area."
-    },
-    {
-      "question": "How much do your services cost?",
-      "answer": "Service costs vary depending on the type of service and specific requirements. You can view detailed pricing for each service on their respective pages. Prices are set by our verified service providers."
-    },
-    {
-      "question": "What if I need to cancel my booking?",
-      "answer": "You can cancel your booking up to 24 hours before the scheduled service time. Cancellations can be made through your account dashboard or by contacting our customer support."
-    },
-    {
-      "question": "Are your service providers verified?",
-      "answer": "Yes, all our service providers go through a thorough verification process including background checks, skill assessment, and customer feedback review before being listed on our platform."
-    },
-    {
-      "question": "How can I contact customer support?",
-      "answer": "You can reach our customer support through the 'Contact Us' section on our website, or by emailing support@servease.com. Our support team is available 24/7 to assist you."
-    }
-  ]
-} 
+[
+  {
+    "questions": ["hello", "hi", "hey", "good morning", "good evening", "howdy"],
+    "answer": "Hello! 👋 Welcome to ServiceX. How can I help you today? You can ask me about our services, booking, pricing, or support."
+  },
+  {
+    "questions": ["what services do you offer", "services available", "what can you do", "list of services", "available services"],
+    "answer": "We offer a wide range of home services:\n🏠 Full Home Cleaning\n🛋️ Sofa & Carpet Cleaning\n🚿 Bathroom Cleaning\n❄️ AC Service & Repair\n🌀 Washing Machine Repair\n📺 Television Repair\n🔧 Plumbing\n🪚 Carpentry\n⚡ Electrical\n🎨 Painting\n🐜 Pest Control\n\nAll services are done by verified professionals!"
+  },
+  {
+    "questions": ["how do i book", "how to book", "book a service", "booking process", "how can i book"],
+    "answer": "Booking is easy! 😊\n1. Click on any service from the home page\n2. Select 'I'm a Customer' and log in\n3. Browse available services and click 'Add'\n4. Enter your address in the cart\n5. Click 'Confirm Booking' — done! ✅"
+  },
+  {
+    "questions": ["how to become provider", "service provider", "register as provider", "join as provider", "add my services"],
+    "answer": "To join as a service provider:\n1. Click on any service page\n2. Select 'I'm a Provider'\n3. Register or log in\n4. Add your services with name, price, duration and description\n\nYou'll be visible to customers immediately! 🚀"
+  },
+  {
+    "questions": ["payment", "how to pay", "payment methods", "accepted payments", "upi", "card"],
+    "answer": "We accept multiple payment methods:\n💳 Credit / Debit Cards\n📱 UPI (GPay, PhonePe, Paytm)\n🏦 Net Banking\n💵 Cash on Service\n\nPayment is collected after the service is completed."
+  },
+  {
+    "questions": ["cancel booking", "cancel my booking", "how to cancel", "cancellation"],
+    "answer": "You can cancel a booking up to 24 hours before the scheduled time from your account dashboard. For urgent cancellations, contact our support at support@servicex.com."
+  },
+  {
+    "questions": ["pricing", "how much", "cost", "charges", "price", "rate", "fees"],
+    "answer": "Prices vary by service and provider. You can view exact pricing on each service page before booking. Prices are set by verified providers and are fully transparent — no hidden charges! 💰"
+  },
+  {
+    "questions": ["are providers verified", "verified professionals", "trusted providers", "background check"],
+    "answer": "Yes! ✅ All our service providers go through:\n🔍 Background verification\n📋 Skill assessment\n⭐ Customer feedback review\n\nYou can see ratings and reviews on each service listing."
+  },
+  {
+    "questions": ["contact support", "customer support", "help", "contact us", "email support"],
+    "answer": "You can reach us at:\n📧 Email: support@servicex.com\n📞 Phone: 1800-XXX-XXXX\n💬 Use the Contact button in the navbar\n\nWe're available Mon–Sat, 9am–9pm."
+  },
+  {
+    "questions": ["track booking", "track my service", "booking status", "where is my booking"],
+    "answer": "You can track your booking status by logging in as a customer and viewing your bookings. The status updates from Pending → Confirmed → Completed."
+  },
+  {
+    "questions": ["areas", "cities", "locations", "where do you serve", "service available"],
+    "answer": "We currently serve major cities across India. Enter your location during booking to check availability in your area. We're expanding fast! 📍"
+  },
+  {
+    "questions": ["ac service", "air conditioner", "ac repair", "ac cleaning"],
+    "answer": "Our AC services include:\n❄️ AC Installation\n🔧 AC Repair & Gas Refill\n🧹 AC Deep Cleaning\n⚙️ Annual Maintenance\n\nBook via the AC Service page!"
+  },
+  {
+    "questions": ["plumbing", "pipe leak", "tap repair", "bathroom leak", "plumber"],
+    "answer": "Our plumbing services cover:\n🚿 Pipe leak repair\n🚰 Tap & faucet fixing\n🪣 Drain unblocking\n🛁 Bathroom fitting\n\nExpert plumbers available same day!"
+  },
+  {
+    "questions": ["electrical", "wiring", "fan installation", "switch board", "electrician"],
+    "answer": "Our electrical services include:\n⚡ Switch & socket repair\n💡 Light installation\n🔌 Fan & AC wiring\n🏠 Full home wiring\n\nAll certified electricians!"
+  },
+  {
+    "questions": ["pest control", "cockroach", "ants", "insects", "termite"],
+    "answer": "Our pest control services target:\n🐜 Cockroaches & Ants\n🦟 Mosquitoes\n🐀 Rodents\n🌿 Termites\n\nSafe, eco-friendly chemicals used. Kids & pet safe!"
+  },
+  {
+    "questions": ["thank you", "thanks", "ok", "okay", "great", "awesome", "nice"],
+    "answer": "You're welcome! 😊 Is there anything else I can help you with? Feel free to ask anytime!"
+  },
+  {
+    "questions": ["bye", "goodbye", "see you", "that's all"],
+    "answer": "Goodbye! 👋 Thank you for choosing ServiceX. Have a great day! Don't hesitate to come back if you need help."
+  }
+]

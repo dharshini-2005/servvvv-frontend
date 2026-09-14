@@ -1,68 +1,149 @@
+/* ============================================================
+   ServiceX — Global Design Tokens & Reset
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap');
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Brand Colors */
+  --sx-primary:       #2563eb;   /* electric blue */
+  --sx-primary-dark:  #1d4ed8;
+  --sx-primary-light: #eff6ff;
+  --sx-secondary:     #f97316;   /* vibrant orange accent */
+  --sx-secondary-dark:#ea580c;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* Neutrals */
+  --sx-bg:            #f8fafc;
+  --sx-surface:       #ffffff;
+  --sx-surface-2:     #f1f5f9;
+  --sx-border:        #e2e8f0;
+  --sx-text:          #0f172a;
+  --sx-text-muted:    #64748b;
+  --sx-text-light:    #94a3b8;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  /* Status */
+  --sx-success:       #16a34a;
+  --sx-warning:       #d97706;
+  --sx-error:         #dc2626;
+
+  /* Shadows */
+  --sx-shadow-sm:  0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+  --sx-shadow:     0 4px 16px rgba(0,0,0,.10);
+  --sx-shadow-lg:  0 10px 40px rgba(37,99,235,.12);
+  --sx-shadow-xl:  0 20px 60px rgba(0,0,0,.15);
+
+  /* Radius */
+  --sx-radius-sm: 6px;
+  --sx-radius:    12px;
+  --sx-radius-lg: 20px;
+  --sx-radius-xl: 32px;
+
+  /* Typography */
+  --sx-font:        'Inter', system-ui, sans-serif;
+  --sx-font-head:   'Poppins', 'Inter', sans-serif;
+
+  /* Transitions */
+  --sx-transition: 0.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--sx-font);
+  background-color: var(--sx-bg);
+  color: var(--sx-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  color: var(--sx-primary);
+  text-decoration: none;
+  transition: color var(--sx-transition);
 }
-a:hover {
-  color: #535bf2;
-}
+a:hover { color: var(--sx-primary-dark); }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--sx-font-head);
+  line-height: 1.2;
+  color: var(--sx-text);
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  font-family: var(--sx-font);
   cursor: pointer;
-  transition: border-color 0.25s;
+  border: none;
+  border-radius: var(--sx-radius-sm);
+  transition: all var(--sx-transition);
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 3px solid var(--sx-primary);
+  outline-offset: 2px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+img { max-width: 100%; display: block; }
+
+input, textarea, select {
+  font-family: var(--sx-font);
+  font-size: 0.95rem;
+}
+
+/* ---- Utility classes ---- */
+.sx-btn-primary {
+  background: var(--sx-primary);
+  color: #fff;
+  padding: 0.65rem 1.5rem;
+  border-radius: var(--sx-radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: background var(--sx-transition), transform var(--sx-transition), box-shadow var(--sx-transition);
+}
+.sx-btn-primary:hover {
+  background: var(--sx-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--sx-shadow);
+}
+
+.sx-btn-secondary {
+  background: transparent;
+  color: var(--sx-primary);
+  padding: 0.65rem 1.5rem;
+  border-radius: var(--sx-radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid var(--sx-primary);
+  cursor: pointer;
+  transition: all var(--sx-transition);
+}
+.sx-btn-secondary:hover {
+  background: var(--sx-primary);
+  color: #fff;
+}
+
+.sx-card {
+  background: var(--sx-surface);
+  border-radius: var(--sx-radius);
+  box-shadow: var(--sx-shadow-sm);
+  border: 1px solid var(--sx-border);
+}
+
+/* Global toast override */
+.Toastify__toast {
+  font-family: var(--sx-font) !important;
+  border-radius: var(--sx-radius-sm) !important;
 }

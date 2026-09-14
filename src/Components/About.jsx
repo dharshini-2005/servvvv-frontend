@@ -1,66 +1,102 @@
-import React from 'react';
-import '../Styles/About.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../Styles/About.css";
 
-const About = () => {
-  return (
-    <div className="about-container">
-      <div className="about-header">
-        <h1>About ServEase</h1>
-        <p className="about-subtitle">Transforming Home Services for a Better Tomorrow</p>
-      </div>
+const stats = [
+  { value: "12M+", label: "Services Booked" },
+  { value: "50+",  label: "Cities Served" },
+  { value: "4.8★", label: "Average Rating" },
+  { value: "1M+",  label: "Happy Customers" },
+];
 
-      <div className="about-content">
-        <section className="about-section vision-section">
-          <div className="section-icon">👁️</div>
-          <h2>Our Vision</h2>
-          <p>
-            To become the most trusted and innovative home services platform, revolutionizing how people access and experience 
-            professional home services. We envision a world where quality home services are accessible, reliable, and seamless 
-            for every household.
-          </p>
-        </section>
+const values = [
+  { icon: "🏆", title: "Excellence",      text: "Delivering the highest quality in every service we facilitate." },
+  { icon: "🤝", title: "Integrity",       text: "Building lasting trust through honest, transparent practices." },
+  { icon: "💡", title: "Innovation",      text: "Continuously evolving our platform to better serve you." },
+  { icon: "❤️", title: "Customer First", text: "Every decision starts and ends with our customers' needs." },
+];
 
-        <section className="about-section mission-section">
-          <div className="section-icon">🎯</div>
-          <h2>Our Mission</h2>
-          <p>
-            To simplify and enhance the home service experience by connecting skilled professionals with homeowners through 
-            a reliable, transparent, and user-friendly platform. We are committed to:
-          </p>
-          <ul>
-            <li>Providing exceptional service quality and reliability</li>
-            <li>Empowering service providers with growth opportunities</li>
-            <li>Creating a seamless booking and service experience</li>
-            <li>Building trust through transparency and accountability</li>
-            <li>Making professional home services accessible to all</li>
-          </ul>
-        </section>
-
-        <section className="about-section values-section">
-          <div className="section-icon">💎</div>
-          <h2>Our Core Values</h2>
-          <div className="values-grid">
-            <div className="value-item">
-              <h3>Excellence</h3>
-              <p>Delivering the highest quality service in everything we do</p>
-            </div>
-            <div className="value-item">
-              <h3>Integrity</h3>
-              <p>Building trust through honest and transparent practices</p>
-            </div>
-            <div className="value-item">
-              <h3>Innovation</h3>
-              <p>Continuously improving and adapting to better serve our community</p>
-            </div>
-            <div className="value-item">
-              <h3>Customer First</h3>
-              <p>Putting our customers' needs at the heart of every decision</p>
-            </div>
-          </div>
-        </section>
+const About = () => (
+  <div className="about-page">
+    {/* Hero */}
+    <div className="about-hero">
+      <div className="about-hero-inner">
+        <Link to="/" className="about-breadcrumb">
+          ← Back to Home
+        </Link>
+        <h1>About ServiceX</h1>
+        <p>
+          India's fastest-growing home services platform — connecting verified professionals
+          with millions of households every day.
+        </p>
       </div>
     </div>
-  );
-};
+
+    {/* Stats bar */}
+    <div className="about-stats">
+      <div className="about-stats-inner">
+        {stats.map((s) => (
+          <div className="about-stat-item" key={s.label}>
+            <span className="about-stat-value">{s.value}</span>
+            <span className="about-stat-label">{s.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {/* Content */}
+    <div className="about-content">
+      {/* Vision */}
+      <div className="about-section">
+        <div className="section-icon-wrap">👁️</div>
+        <h2>Our Vision</h2>
+        <p>
+          To become India's most trusted home services platform — where every household
+          can access safe, reliable, and affordable professional help with a single tap.
+          We envision a future where quality service is never more than minutes away.
+        </p>
+      </div>
+
+      {/* Mission */}
+      <div className="about-section">
+        <div className="section-icon-wrap">🎯</div>
+        <h2>Our Mission</h2>
+        <p>
+          ServiceX connects skilled professionals with homeowners through a transparent,
+          easy-to-use platform. We are committed to:
+        </p>
+        <ul>
+          <li>Providing exceptional, consistent service quality</li>
+          <li>Empowering service providers with growth opportunities and fair earnings</li>
+          <li>Making booking fast, seamless, and stress-free</li>
+          <li>Building community trust through accountability and transparency</li>
+          <li>Making professional home services accessible to every household</li>
+        </ul>
+      </div>
+
+      {/* Values */}
+      <div className="about-section">
+        <div className="section-icon-wrap">💎</div>
+        <h2>Our Core Values</h2>
+        <div className="values-grid">
+          {values.map((v) => (
+            <div className="value-card" key={v.title}>
+              <div className="value-card-icon">{v.icon}</div>
+              <h3>{v.title}</h3>
+              <p>{v.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="about-cta">
+        <h2>Ready to experience ServiceX?</h2>
+        <p>Join over a million happy customers across India.</p>
+        <Link to="/" className="about-cta-btn">Explore Services →</Link>
+      </div>
+    </div>
+  </div>
+);
 
 export default About;
